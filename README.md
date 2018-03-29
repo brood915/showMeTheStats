@@ -1,4 +1,4 @@
-# Website for Football Fans
+# Web app for Soccer Fans
 
 ```
 Allows users to search for league/tournament tables and players' stats, 
