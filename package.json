@@ -6,6 +6,8 @@
     "react-scripts": "1.1.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
     "node-sass-chokidar": "^1.2.2",
     "npm-run-all": "^4.1.2",
     "react": "^16.3.0",
@@ -14,8 +16,9 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
+    "start-client": "react-scripts start",
+    "start-server": "nodemon server/server.js",
+    "start": "npm-run-all -p watch-css start-client start-server",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
