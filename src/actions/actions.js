@@ -6,7 +6,9 @@ import {
 
 import axios from 'axios';
 
+//players-related actions
 
+//others
 export function handleError(bool) {
     return {
      type: ERROR,
@@ -20,5 +22,3 @@ export function handleLoading(bool) {
      isLoading: bool
     }
 }
-
-//players-related actions
