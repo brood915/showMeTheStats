@@ -10,14 +10,14 @@ import axios from 'axios';
 export function handleError(bool) {
     return {
      type: ERROR,
-     error: bool
+     hasErrors: bool
     }
 }
 
 export function handleLoading(bool) {
     return {
      type: LOADING,
-     loading: bool
+     isLoading: bool
     }
 }
 
