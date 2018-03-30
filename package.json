@@ -1,6 +1,7 @@
 {
   "name": "soccer-tracker",
   "version": "0.1.0",
+  "proxy": "http://localhost:1337/",
   "private": true,
   "devDependencies": {
     "react-scripts": "1.1.1"
