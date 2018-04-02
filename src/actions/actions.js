@@ -12,14 +12,14 @@ import axios from 'axios';
 export function handleError(bool) {
     return {
      type: ERROR,
-     hasErrors: bool
+     error: bool
     }
 }
 
 export function handleLoading(bool) {
     return {
      type: LOADING,
-     isLoading: bool
+     loading: bool
     }
 }
 
@@ -35,11 +35,10 @@ export function getData(url) {
         dispatch(handleLoading(true));
 
     axios.get(url)
-        .then((data) => {
-            if (data[0]['web_name']) { // if this property exists, this means it's data for players
-                console.log(data);
+        .then((resp) => {
+            if (resp.data[0]['web_name']) { // if this property exists, this means it's data for players
                 dispatch(handleLoading(false));
-                dispatch(fetchPlayers(data));
+                dispatch(fetchPlayers(resp.data));
             }
         })
         .catch(() => {
