@@ -33,8 +33,8 @@ function players(state = initialState, action) {
     } 
 }
 
-const app = combineReducers({
+const reducersContainer = combineReducers({
     hasErrors, isLoading, players
   });
 
-export default app;
+export default reducersContainer;
