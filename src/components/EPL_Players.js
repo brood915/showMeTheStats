@@ -19,13 +19,15 @@ const EPL_Players = (props) => {
                         <th>#</th>
                         <th>Name</th>
                         <th>Team</th>
+                        <th>Shirts #</th>
                     </tr>
                         {props.players.map((each,index) => {
                             const playerTeam = props.teams.filter(team => each.team_code == team.code);
                             return (<tr key={each.id.toString()}>
-                                <td>{index}</td>
+                                <td>{index+1}</td>
                                 <td>{each.web_name}</td>
                                 <td>{playerTeam[0].short_name}</td>
+                                <td>{each.squad_number}</td>
                             </tr>);
                         })}
                 </tbody>
