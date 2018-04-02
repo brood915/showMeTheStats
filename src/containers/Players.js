@@ -18,7 +18,7 @@ class Players extends Component {
     render() {
       return (
         <div className="Players">
-          <EPL_Players players={this.props.players} errors = {this.props.error} loading = {this.props.loading} />
+          <EPL_Players players={this.props.players} teams = {this.props.teams} errors = {this.props.error} loading = {this.props.loading} />
         </div>
       );
     }
@@ -26,7 +26,8 @@ class Players extends Component {
 
   const mapStateToProps = (state) => {
     return { //to access state data as props
-        players: state.players,
+        players: state.playersData.players,
+        teams: state.playersData.teams,
         error: state.playersHasErrors,
         loading: state.playersIsLoading
     };

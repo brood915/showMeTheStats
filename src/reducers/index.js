@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { players, playersHasErrors, playersIsLoading } from './players';
+import { playersData, playersHasErrors, playersIsLoading } from './players';
 
 const reducersContainer = combineReducers({
     playersHasErrors, 
     playersIsLoading, 
-    players
+    playersData
   });
 
 export default reducersContainer;
