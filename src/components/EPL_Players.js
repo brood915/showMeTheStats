@@ -1,7 +1,6 @@
 import React from 'react';
 
 const EPL_Players = (props) => {
-
     let content = '';
 
     if (props.loading) {
@@ -16,18 +15,20 @@ const EPL_Players = (props) => {
             <table>
                 <tbody>
                     <tr>
-                        <th>#</th>
                         <th>Name</th>
-                        <th>Team</th>
                         <th>Shirts #</th>
+                        <th>Team</th>
+                        <th>Pos</th>
+                        
                     </tr>
                         {props.players.map((each,index) => {
                             const playerTeam = props.teams.filter(team => each.team_code == team.code);
+                            const position = props.positions.filter(position => each.element_type == position.id);
                             return (<tr key={each.id.toString()}>
-                                <td>{index+1}</td>
                                 <td>{each.web_name}</td>
-                                <td>{playerTeam[0].short_name}</td>
                                 <td>{each.squad_number}</td>
+                                <td>{playerTeam[0].short_name}</td>
+                                <td>{position[0].singular_name_short}</td>
                             </tr>);
                         })}
                 </tbody>

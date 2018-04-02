@@ -18,7 +18,7 @@ class Players extends Component {
     render() {
       return (
         <div className="Players">
-          <EPL_Players players={this.props.players} teams = {this.props.teams} errors = {this.props.error} loading = {this.props.loading} />
+          <EPL_Players players={this.props.players} teams = {this.props.teams} positions = {this.props.positions} errors = {this.props.error} loading = {this.props.loading} />
         </div>
       );
     }
@@ -28,6 +28,7 @@ class Players extends Component {
     return { //to access state data as props
         players: state.playersData.players,
         teams: state.playersData.teams,
+        positions: state.playersData.positions,
         error: state.playersHasErrors,
         loading: state.playersIsLoading
     };

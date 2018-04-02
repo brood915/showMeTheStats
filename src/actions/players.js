@@ -20,11 +20,12 @@ export function playersIsLoading(bool) {
     }
 }
 
-export function fetchPlayersSuccess(players, teams) {
+export function fetchPlayersSuccess(players, teams, positions) {
     return {
         type: GET_PLAYERS,
         players,
-        teams
+        teams,
+        positions
     }
 }
 
@@ -35,7 +36,7 @@ export function getPlayers() {
     axios.get('/api/players')
         .then((resp) => {
                 dispatch(playersIsLoading(false));
-                dispatch(fetchPlayersSuccess(resp.data.elements, resp.data.teams));
+                dispatch(fetchPlayersSuccess(resp.data.elements, resp.data.teams, resp.data.element_types));
         })
         .catch(() => {
             dispatch(playersIsLoading(false));

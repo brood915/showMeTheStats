@@ -2,7 +2,8 @@ import { combineReducers } from 'redux';
 
 const initialState = {
     players:[],
-    teams:[]
+    teams:[],
+    positions:[]
 }
 export function playersHasErrors(state = false, action) {
     switch (action.type) {
@@ -27,7 +28,8 @@ export function playersData(state = initialState, action) {
         case 'GET_PLAYERS':
             return Object.assign({}, state, {
                 players: action.players,
-                teams: action.teams //only needed to get the names of the players' teams
+                teams: action.teams, //only needed to get the names of the players' teams
+                positions: action.positions // only needed to get the players' positions
             });
         default:
             return state;
