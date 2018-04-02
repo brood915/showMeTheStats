@@ -1,7 +1,7 @@
 import {
     ERROR,
     LOADING,
-    GET_PLAYERS
+    GET_DATA
 } from './actionTypes';
 
 import axios from 'axios';
@@ -20,5 +20,29 @@ export function handleLoading(bool) {
     return {
      type: LOADING,
      isLoading: bool
+    }
+}
+
+export function fetchDataSuccess(data) {
+    return {
+        type: GET_DATA,
+        data
+    }
+}
+
+export function getData(url) {
+    return(dispatch) => {
+        dispatch(handleLoading(true));
+
+    axios.get('/api/players')
+        .then((data) => {
+            console.log(data);
+            dispatch(handleLoading(false));
+            dispatch(fetchDataSuccess(data));
+        })
+        .catch(() => {
+            dispatch(handleLoading(false));
+            dispatch(handleError(true));
+        })
     }
 }
