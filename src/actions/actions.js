@@ -1,7 +1,7 @@
 import {
     ERROR,
     LOADING,
-    GET_DATA
+    GET_PLAYERS
 } from './actionTypes';
 
 import axios from 'axios';
@@ -23,9 +23,9 @@ export function handleLoading(bool) {
     }
 }
 
-export function fetchDataSuccess(data) {
+export function fetchPlayers(data) {
     return {
-        type: GET_DATA,
+        type: GET_PLAYERS,
         data
     }
 }
@@ -34,11 +34,13 @@ export function getData(url) {
     return(dispatch) => {
         dispatch(handleLoading(true));
 
-    axios.get('/api/players')
+    axios.get(url)
         .then((data) => {
-            console.log(data);
-            dispatch(handleLoading(false));
-            dispatch(fetchDataSuccess(data));
+            if (data[0]['web_name']) { // if this property exists, this means it's data for players
+                console.log(data);
+                dispatch(handleLoading(false));
+                dispatch(fetchPlayers(data));
+            }
         })
         .catch(() => {
             dispatch(handleLoading(false));
