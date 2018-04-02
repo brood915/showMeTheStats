@@ -15,17 +15,17 @@ const EPL_Players = (props) => {
             <table>
                 <tbody>
                     <tr>
-                        <th>Name</th>
-                        <th>Shirts #</th>
-                        <th>Team</th>
-                        <th>Pos</th>
-                        <th>Goals</th>
-                        <th>Assists</th>
-                        <th>Own Goals</th>
-                        <th>Goals/hr</th>
-                        <th>Assists/hr</th>
-                        <th>G+A/hr</th>
-                        <th>Minutes Played</th>
+                        <th className = "players_table_box">Name</th>
+                        <th className = "players_table_box">Shirts #</th>
+                        <th className = "players_table_box">Team</th>
+                        <th className = "players_table_box">Pos</th>
+                        <th className = "players_table_box">Goals</th>
+                        <th className = "players_table_box">Assists</th>
+                        <th className = "players_table_box">Own Goals</th>
+                        <th className = "players_table_box">Goals/hr</th>
+                        <th className = "players_table_box">Assists/hr</th>
+                        <th className = "players_table_box">G+A/hr</th>
+                        <th className = "players_table_box">Minutes Played</th>
                     </tr>
                         {props.players.map((each,index) => {
                             const hrs = each.minutes/60;

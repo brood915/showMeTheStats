@@ -3,6 +3,7 @@ import EPL_Players from '../components/EPL_Players';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getPlayers } from '../actions/players';
+import "../styles/players.css";
 
 class Players extends Component {
     constructor(props) {
