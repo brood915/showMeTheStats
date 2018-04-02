@@ -3,9 +3,12 @@
 ```
 Allows users to search for league/tournament tables and players' stats, 
 and save them so that they dont need to search again repeatedly. 
+
 The data saved get updated automatically whenever users revisit the page.
 
 Built with react, redux, react-router, nodejs, and mysql.
+
+It currently supports only EPL for players' stats.
 
 
 ### Quick start
