@@ -7,10 +7,10 @@ Allows users to track stats, etc for League Of Legends, Battlegrounds, Overwatch
 ### Quick start
 ```bash
 # clone repo
-$ git clone https://github.com/brood915/show-me-the-stats.git
+$ git clone https://github.com/brood915/showMeTheStats.git
 
 # change directory to the app
-$ cd show-me-the-stats
+$ cd showMeTheStats
 
 # install the dependencies with npm
 $ npm install
