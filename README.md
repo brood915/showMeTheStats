@@ -1,20 +1,13 @@
 # Web app for Soccer Fans
 
 ```
-Allows users to search for league/tournament tables and players' stats, 
-and save them so that they dont need to search again repeatedly. 
-
-The data saved get updated automatically whenever users revisit the page.
-
-Built with react, redux, react-router, nodejs, and mysql.
-
-It currently supports only EPL for players' stats.
+Allows users to track stats, etc for League Of Legends, Battlegrounds, Overwatch, etc..
 
 
 ### Quick start
 ```bash
 # clone repo
-$ git clone https://github.com/brood915/soccer-tracker.git
+$ git clone https://github.com/brood915/show-me-the-stats.git
 
 # change directory to the app
 $ cd soccer-tracker
