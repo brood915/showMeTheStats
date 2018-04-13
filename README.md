@@ -1,4 +1,4 @@
-# Web app for Soccer Fans
+# Web app for tracking game stats.
 
 ```
 Allows users to track stats, etc for League Of Legends, Battlegrounds, Overwatch, etc..
